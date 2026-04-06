@@ -2,6 +2,16 @@ import streamlit as st
 import dashscope
 from dashscope import Generation
 
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
+
 # =================配置区域=================
 # 请在这里填入你的阿里云 API KEY
 DASHSCOPE_API_KEY = "sk-6ef773f5f0f84a11bff331c699635036"
