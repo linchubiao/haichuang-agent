@@ -6,9 +6,21 @@ hide_streamlit_style = """
             <style>
             #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
-            header {visibility: hidden;}
+            /* 只隐藏header中的特定元素，保留侧边栏切换按钮 */
+            header .main-header {
+                visibility: hidden;
+                height: 0;
+            }
+            /* 确保侧边栏默认打开 */
+            .stSidebar {
+                display: block !important;
+            }
+            .main {
+                margin-left: 24rem !important;
+            }
             </style>
             """
+
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 
